@@ -1,6 +1,6 @@
 {
-  "name": "240-react-lib-esbuild",
-  "version": "1.0.0",
+  "name": "@fancn21th/react-lib",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
