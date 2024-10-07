@@ -7,3 +7,8 @@ Rollup is a JavaScript module bundler that is used to bundle JavaScript files. I
 Vite is a modern build tool that is used to build modern web applications. It is written in JavaScript and is used to build modern web applications. It is also used to transpile modern JavaScript code to older versions of JavaScript that are compatible with older browsers.
 
 Mixed them together with minimal configuration is what this project is about.
+
+## Steps
+
+- start with vite
+  - lib mode
