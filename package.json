@@ -2,7 +2,19 @@
   "name": "@fancn21th/react-lib",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/my-component-library.cjs.js",
+  "module": "./dist/my-component-library.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/my-component-library.es.js",
+      "require": "./dist/my-component-library.cjs.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -b && vite build"
   },
@@ -14,12 +26,16 @@
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
     "lucide-react": "0.447.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
     "tailwind-merge": "2.5.3",
     "tailwindcss-animate": "1.0.7"
   },
+  "peerDependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
   "devDependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "@types/node": "22.7.4",
     "@types/react": "18.3.11",
     "@types/react-dom": "18.3.0",
@@ -30,6 +46,7 @@
     "tailwindcss": "3.4.13",
     "typescript": "5.6.2",
     "vite": "5.4.8",
-    "vite-plugin-dts": "4.2.3"
+    "vite-plugin-dts": "4.2.3",
+    "vite-plugin-lib-inject-css": "2.1.1"
   }
 }
