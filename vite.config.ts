@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import dts from "vite-plugin-dts";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
+import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig({
   plugins: [
@@ -11,6 +12,12 @@ export default defineConfig({
     libInjectCss(),
     dts({
       include: ["src"], // when you put both source and dev code in the src directory and you only want to generate types for the source code
+    }),
+    visualizer({
+      filename: "./stats.html", // 生成的报告文件
+      open: true, // 打包后自动打开浏览器展示报告
+      gzipSize: true, // 显示 gzip 压缩后的大小
+      brotliSize: true, // 显示 brotli 压缩后的大小
     }),
   ],
   build: {
